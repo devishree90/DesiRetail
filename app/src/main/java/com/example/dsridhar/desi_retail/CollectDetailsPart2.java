@@ -1,29 +1,41 @@
 package com.example.dsridhar.desi_retail;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.content.Intent;
 import android.widget.EditText;
 
 import java.util.HashMap;
-import java.util.Map;
 
 
-public class MainActivity extends Activity {
+public class CollectDetailsPart2 extends ActionBarActivity {
     public final static String PROD_DETAILS = "com.example.dsridhar.desi_retail.PROD_DETAILS";
 
-
+    HashMap<String, String> prod_details;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        Intent intent = getIntent();
+        prod_details = (HashMap<String, String>)intent.getSerializableExtra(MainActivity.PROD_DETAILS);
+        Log.v("HashMapTest", prod_details.values().toString());
+        setContentView(R.layout.activity_collect_details_2);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
+    public void sendStock(View view) {
+        Intent intent = new Intent(this, CollectDetailsPart3.class);
+        prod_details.put("stock",((EditText)findViewById(R.id.stock)).getText().toString());
+        intent.putExtra(PROD_DETAILS, prod_details);
+        startActivity(intent);
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -45,10 +57,5 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void prodRegistration(View view) {
-        Intent intent = new Intent(this, CollectDetailsPart1.class);
-        startActivity(intent);
     }
 }

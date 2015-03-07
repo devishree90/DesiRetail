@@ -1,27 +1,26 @@
 package com.example.dsridhar.desi_retail;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.content.Intent;
 import android.widget.EditText;
 
 import java.util.HashMap;
-import java.util.Map;
 
 
-public class MainActivity extends Activity {
+public class CollectDetailsPart1 extends ActionBarActivity {
     public final static String PROD_DETAILS = "com.example.dsridhar.desi_retail.PROD_DETAILS";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_collect_details_part1);
     }
 
 
@@ -47,8 +46,14 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void prodRegistration(View view) {
-        Intent intent = new Intent(this, CollectDetailsPart1.class);
+    public void sendMessage(View view) {
+        HashMap prod_details=new HashMap();
+        Intent intent = new Intent(this, CollectDetailsPart2.class);
+        prod_details.put("prod_name",((EditText) findViewById(R.id.productName)).getText().toString());
+        prod_details.put("prod_info",((EditText) findViewById(R.id.productInfo)).getText().toString());
+        prod_details.put("prod_cost",((EditText) findViewById(R.id.productCost)).getText().toString());
+        intent.putExtra(PROD_DETAILS, prod_details);
         startActivity(intent);
     }
 }
+

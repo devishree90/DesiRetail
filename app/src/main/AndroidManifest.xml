@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dsridhar.desi_retail" >
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -15,6 +21,30 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".CollectDetailsPart2"
+            android:label="@string/title_activity_collect_details_2"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dsridhar.desi_retail.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CollectDetailsPart3"
+            android:label="@string/title_activity_collect_details_part3"
+            android:parentActivityName=".CollectDetailsPart2" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dsridhar.desi_retail.CollectDetailsPart2" />
+        </activity>
+        <activity
+            android:name=".CollectDetailsPart1"
+            android:label="@string/title_activity_collect_details_part1"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dsridhar.desi_retail.MainActivity" />
         </activity>
     </application>
 
