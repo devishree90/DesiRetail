@@ -34,21 +34,29 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        // Handle presses on the action bar items
+        switch (item.getItemId()) {
+            case R.id.action_search:
+//                openSearch();
+                return true;
+            case R.id.action_settings:
+//                openSettings();
+                return true;
+            case R.id.action_home:
+                openHome();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-
-        return super.onOptionsItemSelected(item);
     }
 
     public void prodRegistration(View view) {
         Intent intent = new Intent(this, CollectDetailsPart1.class);
+        startActivity(intent);
+    }
+
+    public void openHome(){
+        Intent intent = new Intent(this, CollectDetailsPart2.class);
         startActivity(intent);
     }
 }

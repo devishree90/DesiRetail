@@ -21,6 +21,7 @@ public class CollectDetailsPart1 extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_collect_details_part1);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 

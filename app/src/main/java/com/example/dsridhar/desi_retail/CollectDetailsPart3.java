@@ -17,14 +17,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.URI;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 
 
 public class CollectDetailsPart3 extends ActionBarActivity {
-    static final int REQUEST_TAKE_PHOTO = 1;
+    static final int REQUEST_TAKE_PHOTO = 1888;
     HashMap<String, String> prod_details;
 
     @Override
@@ -37,13 +39,11 @@ public class CollectDetailsPart3 extends ActionBarActivity {
     }
 
     public void takePic(View view) {
-//        Intent intent = new Intent(this, CollectDetailsPart3.class);
-        dispatchTakePictureIntent();
-//        startActivity(intent);
-
+        Intent intent=dispatchTakePictureIntent();
+        if(REQUEST_TAKE_PHOTO && )
     }
 
-    private void dispatchTakePictureIntent() {
+    private Intent dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         // Ensure that there's a camera activity to handle the intent
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
@@ -51,10 +51,7 @@ public class CollectDetailsPart3 extends ActionBarActivity {
             File photoFile = null;
             try {
                 photoFile = createImageFile();
-            } catch (IOException ex) {
-                // Error occurred while creating the File
-
-            }
+            } catch (IOException ex) {}
             // Continue only if the File was successfully created
             if (photoFile != null) {
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT,
@@ -62,6 +59,8 @@ public class CollectDetailsPart3 extends ActionBarActivity {
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
             }
         }
+//        galleryAddPic();
+        return takePictureIntent;
     }
 
     String mCurrentPhotoPath;
@@ -79,8 +78,16 @@ public class CollectDetailsPart3 extends ActionBarActivity {
         );
 
         // Save a file: path for use with ACTION_VIEW intents
-        mCurrentPhotoPath = "file:" + image.getAbsolutePath();
+        mCurrentPhotoPath = "file:/" + image.getAbsolutePath();
         return image;
+    }
+
+    private void galleryAddPic() {
+        Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+        File f = new File(mCurrentPhotoPath);
+        Uri contentUri = Uri.fromFile(f);
+        mediaScanIntent.setData(contentUri);
+        this.sendBroadcast(mediaScanIntent);
     }
 
     @Override
