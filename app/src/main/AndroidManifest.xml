@@ -46,6 +46,36 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dsridhar.desi_retail.MainActivity" />
         </activity>
+
+        <activity
+            android:name=".RegistrationKickOff"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ProductCategoryDetails"
+            android:label="@string/title_activity_display_message"
+            android:parentActivityName=".RegistrationKickOff" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dsridhar.desi_retail.RegistrationKickOff" />
+        </activity>
+        <activity
+            android:name=".BankDetails"
+            android:label="Bank details" >
+        </activity>
+        <activity
+            android:name=".WebSiteChooser"
+            android:label="Choose eCommerce site" >
+        </activity>
+        <activity
+            android:name=".Review"
+            android:label="@string/title_activity_review" >
+        </activity>
     </application>
 
 </manifest>

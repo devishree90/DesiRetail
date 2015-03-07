@@ -10,5 +10,13 @@
     <string name="action_search">Search</string>
     <string name="title_activity_collect_details_part1">CollectDetailsPart1</string>
     <string name="action_home">Home</string>
+    <string name="enter_phone_number">Enter your phone number</string>
+    <string name="send_button">Send</string>
+    <string name="title_main_activity">Register Number</string>
+    <string name="title_activity_display_message">Product details</string>
+    <string name="next">Next</string>
+    <string name="no_phone_number">There is no phone number associated with this mobile</string>
+    <string name="welcome_message">Welcome to DesiRetail</string>
+    <string name="title_activity_review">Review</string>
 
 </resources>
