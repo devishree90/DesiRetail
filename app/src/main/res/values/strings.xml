@@ -21,4 +21,7 @@
     <string name="choose_website">Choose eCommerce site</string>
     <string name="summary_details_text">Summary of details provided</string>
     <string name="go_to_home">Home Page</string>
+    <string name="ifsc_code">IFSC Code</string>
+    <string name="account_name">Account Number</string>
+    <string name="enter_bank_details">Enter Bank details</string>
 </resources>

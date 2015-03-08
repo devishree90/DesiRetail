@@ -5,7 +5,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/BankName"
+        android:id="@+id/bank_name"
         android:layout_weight="1"
         android:layout_gravity="center_vertical"
         android:hint="Bank Name"
@@ -16,29 +16,29 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/ifscCode"
-        android:layout_below="@+id/BankName"
+        android:id="@+id/ifsc_code"
+        android:layout_below="@+id/bank_name"
         android:layout_marginTop="46dp"
-        android:layout_alignLeft="@+id/BankName"
-        android:layout_alignStart="@+id/BankName"
-        android:layout_alignRight="@+id/BankName"
-        android:layout_alignEnd="@+id/BankName"
-        android:hint="IFSC Code" />
+        android:layout_alignLeft="@+id/bank_name"
+        android:layout_alignStart="@+id/bank_name"
+        android:layout_alignRight="@+id/bank_name"
+        android:layout_alignEnd="@+id/bank_name"
+        android:hint="@string/ifsc_code" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/accountNumber"
+        android:id="@+id/account_number"
         android:layout_marginTop="49dp"
-        android:hint="Account Number"
-        android:layout_below="@+id/ifscCode"
+        android:hint="@string/account_name"
+        android:layout_below="@+id/ifsc_code"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Next"
-        android:id="@+id/bankDetails"
+        android:id="@+id/bank_details"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="50dp"
@@ -48,10 +48,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Enter Bank details"
+        android:text="@string/enter_bank_details"
         android:id="@+id/bank_details_text"
         android:layout_marginTop="64dp"
         android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/accountNumber"
-        android:layout_alignEnd="@+id/accountNumber" />
+        android:layout_alignRight="@+id/account_number"
+        android:layout_alignEnd="@+id/account_number" />
 </RelativeLayout>
