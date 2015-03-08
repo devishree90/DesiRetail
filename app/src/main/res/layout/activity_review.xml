@@ -1,12 +1,32 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.lrajanal.helloworldretry.Review">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.example.dsridhar.desi_retail.Review"
+    android:weightSum="1">
 
-    <TextView android:text="Registration review" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TextView
+        android:text="@string/summary_details_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/review_text_view"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+    />
+    <ListView
+        android:layout_width="325dp"
+        android:layout_height="356dp"
+        android:id="@+id/review_list_view"
+        android:layout_weight="0.76">
+    </ListView>
 
-</RelativeLayout>
+    <Button
+        android:text="@string/go_to_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/review_to_home_button"
+        android:onClick="goToRegisteredHome"
+        />
+
+</LinearLayout>

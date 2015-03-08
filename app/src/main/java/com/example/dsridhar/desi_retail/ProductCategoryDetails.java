@@ -19,16 +19,6 @@ public class ProductCategoryDetails extends ActionBarActivity{
         setContentView(R.layout.activity_product_category_details);
         Intent intent = getIntent();
 
-        String message = intent.getStringExtra(RegistrationKickOff.EXTRA_MESSAGE);
-
-        //Create a TextView
-        TextView textView = new TextView(this);
-        textView.setTextSize(20);
-        textView.setText(message);
-
-        //Set the text view as activity layout
-        setContentView(textView);
-
     }
 
 

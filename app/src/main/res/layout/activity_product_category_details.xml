@@ -29,15 +29,6 @@
         android:layout_marginTop="101dp"
         android:hint="Product Category" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText3"
-        android:hint="Quantity"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="272dp" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
