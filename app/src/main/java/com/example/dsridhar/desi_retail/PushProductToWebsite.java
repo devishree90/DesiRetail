@@ -1,28 +1,27 @@
 package com.example.dsridhar.desi_retail;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
-/**
- * Created by lrajanal on 06/03/15.
- */
 
-public class Review extends ActionBarActivity {
+public class PushProductToWebsite extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_review);
+        setContentView(R.layout.activity_push_product_to_website);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_activity_actions, menu);
-        return super.onCreateOptionsMenu(menu);
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_push_product_to_website, menu);
+        return true;
     }
 
     @Override
@@ -39,4 +38,12 @@ public class Review extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    //Go to home after pushing product to ecommerce website
+    public void goToHome(View view)
+    {
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+
 }

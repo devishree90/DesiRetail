@@ -24,4 +24,7 @@
     <string name="ifsc_code">IFSC Code</string>
     <string name="account_name">Account Number</string>
     <string name="enter_bank_details">Enter Bank details</string>
+    <string name="title_activity_push_product_to_website">Push product to website</string>
+    <string name="ecommerce_site_1">eCommSite1</string>
+    <string name="ecommerce_site_2">eCommSite2</string>
 </resources>

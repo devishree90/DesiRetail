@@ -40,7 +40,7 @@ public class CollectDetailsPart3 extends ActionBarActivity {
 
     public void takePic(View view) {
         Intent intent=dispatchTakePictureIntent();
-        if(REQUEST_TAKE_PHOTO && )
+        //if(REQUEST_TAKE_PHOTO && )
     }
 
     private Intent dispatchTakePictureIntent() {
@@ -110,5 +110,12 @@ public class CollectDetailsPart3 extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    //Post product to website
+    public void postProductToWebsite(View view)
+    {
+        Intent intent = new Intent(this,PushProductToWebsite.class);
+        startActivity(intent);
     }
 }

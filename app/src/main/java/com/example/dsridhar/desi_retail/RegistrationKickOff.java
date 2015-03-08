@@ -17,6 +17,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+/**
+ * Created by lrajanal on 06/03/15.
+ */
 
 public class RegistrationKickOff extends ActionBarActivity{
 

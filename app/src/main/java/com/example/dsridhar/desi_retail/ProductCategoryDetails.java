@@ -1,5 +1,6 @@
 package com.example.dsridhar.desi_retail;
 
+
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -10,6 +11,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ * Created by lrajanal on 06/03/15.
+ */
 
 public class ProductCategoryDetails extends ActionBarActivity{
 

@@ -19,4 +19,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/photo" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/go_to_website_chooser"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/next"
+        android:onClick="postProductToWebsite"/>
 </LinearLayout>

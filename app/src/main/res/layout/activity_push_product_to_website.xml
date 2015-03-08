@@ -1,0 +1,52 @@
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="com.example.dsridhar.desi_retail.PushProductToWebsite">
+
+    <TextView android:text="@string/choose_website" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/product_push_done_button"
+        android:layout_alignStart="@+id/product_push_done_button"
+        android:id="@+id/textView5"
+        android:layout_x="105dp"
+        android:layout_y="57dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/product_push_done_button"
+        android:onClick="goToHome"
+        android:layout_marginTop="250dp"
+        android:text="@string/abc_action_mode_done"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="150dp"
+        android:layout_x="118dp"
+        android:layout_y="354dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/website_checkbox1"
+        android:text="@string/ecommerce_site_1"
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignRight="@+id/product_push_done_button"
+        android:layout_alignEnd="@+id/product_push_done_button"
+        android:layout_x="112dp"
+        android:layout_y="153dp" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/website_checkbox2"
+        android:text="@string/ecommerce_site_2"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/website_checkbox1"
+        android:layout_toEndOf="@+id/website_checkbox1"
+        android:layout_marginTop="148dp"
+        android:layout_x="108dp"
+        android:layout_y="232dp" />
+
+</AbsoluteLayout>
