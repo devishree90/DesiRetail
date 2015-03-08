@@ -4,6 +4,7 @@ import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.content.Intent;
 import android.view.View;
@@ -37,12 +38,11 @@ public class RegistrationKickOff extends ActionBarActivity{
             setContentView(R.layout.activity_registration_kickoff);
         }
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        //getMenuInflater().inflate(R.menu.menu_my, menu);
-        return true;
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_activity_actions, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     /*This method  is invoked when the user clicks send button*/
@@ -143,6 +143,13 @@ public class RegistrationKickOff extends ActionBarActivity{
     {
         Intent intent = new Intent(this,Review.class);
         setContentView(R.layout.activity_main);
+    }
+
+    //Invoke product registration flow!
+    public void prodRegistration(View view)
+    {
+        Intent intent = new Intent(this, CollectDetailsPart1.class);
+        startActivity(intent);
     }
 
 }

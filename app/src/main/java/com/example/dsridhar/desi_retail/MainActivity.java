@@ -50,13 +50,9 @@ public class MainActivity extends Activity {
         }
     }
 
-    public void prodRegistration(View view) {
-        Intent intent = new Intent(this, CollectDetailsPart1.class);
-        startActivity(intent);
-    }
-
     public void openHome(){
         Intent intent = new Intent(this, CollectDetailsPart2.class);
         startActivity(intent);
+        setContentView(R.layout.activity_collect_details_2);
     }
 }
